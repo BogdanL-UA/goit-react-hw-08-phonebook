@@ -21,13 +21,11 @@ export const ContactList = () => {
   const contactsList = filterContacts();
 
   return (
-    <div className={styles.contacts}>
-      <ol className={styles.contactsList}>
-        {contactsList.map(({ id, name, number }) => {
-          return <Contact key={id} name={name} number={number} ID={id} />;
-        })}
-      </ol>
-    </div>
+    <ul className={styles.contactsList}>
+      {contactsList.map(({ id, name, number }) => {
+        return <Contact key={id} name={name} number={number} ID={id} />;
+      })}
+    </ul>
   );
 };
 
